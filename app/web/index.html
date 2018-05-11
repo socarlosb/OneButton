@@ -35,8 +35,19 @@
   <script>
     var one = document.querySelector('input')
     one.addEventListener('click', () => {
-      alert('I know')
-    })
+      alert(randomStuff());
+    });
+
+    var words = [
+      'I know!',
+      'That could work...',
+      'What do you think?',
+      'Why don\'t you do it?'
+    ]
+    function randomStuff() {
+      var randomNumber = Math.floor(Math.random() * words.length);
+      return words[randomNumber];
+    }
   </script>
 </body>
 
